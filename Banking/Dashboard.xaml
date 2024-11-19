@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Dashboard"
+             Title="Dashboard">
+    <VerticalStackLayout>
+
+         <Image
+            Source="titlelogo.png"
+            HeightRequest="95"
+            VerticalOptions="Start"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo of the Titlescreen" />
+
+
+        <Label 
+            Text="Welcome to your GET RICH APP"
+            Style="{StaticResource Headline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+
+        <Label
+            Text="User:[Username]"
+            Style="{StaticResource SubHeadline}"
+            TextColor="Black"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="Kontostand:[Konto]"
+           Style="{StaticResource SubHeadline}"
+           TextColor="Black"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"
+           
+            />
+
+        <Label
+           Text="Mögliche Aktionen:"
+           Style="{StaticResource SubHeadline}"
+           TextColor="Black"
+           VerticalOptions="StartAndExpand" 
+           HorizontalOptions="StartAndExpand" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+
+        <Button
+          x:Name="CounterBtn2"
+          Text="Überweisung  " 
+          SemanticProperties.Hint="go to Überweisung-page"
+          Clicked="CounterBtn2_Clicked"
+          HorizontalOptions="Start" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Button
+         x:Name="CounterBtn3"
+         Text="Transaktionen" 
+         SemanticProperties.Hint="go to transaction-page"
+         Clicked="CounterBtn3_Clicked"
+         HorizontalOptions="Start" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Button
+          x:Name="CounterBtn4"
+          Text="Kontoauszüge" 
+          SemanticProperties.Hint="go to Kontoauszug-page"
+          Clicked="CounterBtn4_Clicked"
+          HorizontalOptions="Start" />
+
+    </VerticalStackLayout>
+</ContentPage>

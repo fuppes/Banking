@@ -36,9 +36,9 @@
 
             <Button
                 x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
+                Text="Continue" 
+                SemanticProperties.Hint="go to next page"
+                Clicked="CounterBtn_Clicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
