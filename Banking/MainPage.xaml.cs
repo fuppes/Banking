@@ -43,6 +43,7 @@ namespace Banking
 
             Random random = new Random();
             User.Accountbalance = random.Next(0, 5000000) + random.NextDouble();
+            User.Accountbalance=Math.Round(User.Accountbalance,2);
             User.IBAN = "DE75512108001245126199";
             var uriBuilder = new UriBuilder
             {

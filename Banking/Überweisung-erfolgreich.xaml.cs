@@ -9,6 +9,12 @@ public partial class Überweisung_erfolgreich : ContentPage
 
     private async void CounterBtn17_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(Dashboard), true);
+        var uriBuilder = new UriBuilder
+        {
+            Path = "//Dashboard"
+        };
+        string uri = uriBuilder.Uri.ToString();
+
+        await Shell.Current.GoToAsync(uri, true);
     }
 }

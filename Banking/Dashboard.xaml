@@ -19,22 +19,39 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
+        <Label
+            x:Name="BlaBlo"
+           Text="User: "
+           Style="{StaticResource SubHeadline}"
+           FontSize="Large"
+           TextColor="Black"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+
 
 
         <Label
             x:Name="lblUser"
-            Text="User: "
             Style="{StaticResource SubHeadline}"
-            TextColor="Black"
+            TextColor="Blue"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             />
 
         <Label
-            x:Name="lblBalance"
+            x:Name="BlaBla"
            Text="Kontostand: "
            Style="{StaticResource SubHeadline}"
+           FontSize="Large"
            TextColor="Black"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label
+            x:Name="lblBalance"
+           Style="{StaticResource SubHeadline}"
+           TextColor="Blue"
            VerticalOptions="Center" 
            HorizontalOptions="Center"
            

@@ -10,13 +10,14 @@ public partial class Dashboard : ContentPage, INotifyPropertyChanged
 {
     private string _username;
     private string _accountBalance;
+    private bool _wasDisplayed = false;
 
     public string Username
     {
         get => _username;
         set
         {
-            if (_username != value)
+            if (_username != value && _wasDisplayed == false)
             {
                 _username = value;
                 OnPropertyChanged();
@@ -30,7 +31,7 @@ public partial class Dashboard : ContentPage, INotifyPropertyChanged
         get => _accountBalance;
         set
         {
-            if (_accountBalance != value)
+            if (_accountBalance != value && _wasDisplayed == false)
             {
                 _accountBalance = value;
                 OnPropertyChanged();
@@ -46,12 +47,13 @@ public partial class Dashboard : ContentPage, INotifyPropertyChanged
 
     private void LoadName(string username)
     {
-        lblUser.Text += username;
+        lblUser.Text = username;
     }
 
     private void LoadBalance(string balance)
     {
-        lblBalance.Text += balance + " €";
+        lblBalance.Text = balance + " €";
+        _wasDisplayed = true;
     }
 
     private async void CounterBtn2_Clicked(object sender, EventArgs e)
@@ -71,7 +73,12 @@ public partial class Dashboard : ContentPage, INotifyPropertyChanged
 
     private async void CounterBtn21_Clicked(object sender, EventArgs e)
     {
-        await Shell.Current.Navigation.PopToRootAsync();
+
+        _wasDisplayed =false;
+        _username = string.Empty;
+        _accountBalance = string.Empty;
+        await Shell.Current.GoToAsync(nameof(MainPage), true);
+
     }
 
     // Für die UI-Updates
