@@ -36,6 +36,7 @@
 
             <Button
                 x:Name="CounterBtn"
+                BackgroundColor="DarkBlue"
                 Text="Continue" 
                 SemanticProperties.Hint="go to next page"
                 Clicked="CounterBtn_Clicked"

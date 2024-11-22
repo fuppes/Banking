@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Überweisung_tätigen"
+             Title="Überweisung_tätigen">
+    <VerticalStackLayout>
+
+
+        <Image
+            Source="titlelogo.png"
+            HeightRequest="110"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo of the Titlescreen"  />
+
+        <Label 
+            Text="Überweisung tätigen:"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            Style="{StaticResource SubHeadline}"
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Label 
+            Text="Geldbetrag:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+
+        <Entry
+      	    x:Name="MoneyEntry" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            Style="{StaticResource SubHeadline}"
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+
+        <Label 
+            Text="Empfänger:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+	        x:Name="EmpfängerEntry"
+	
+    />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            Style="{StaticResource SubHeadline}"
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Verwendungszweck:"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+	        x:Name="VerwendungszweckEntry" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            Style="{StaticResource SubHeadline}"
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Button
+            x:Name="CounterBtn15"
+            BackgroundColor="DarkBlue"
+            Text="Überweisen" 
+            SemanticProperties.Hint="Do a Überweisung"
+            Clicked="CounterBtn15_Clicked"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            Style="{StaticResource SubHeadline}"
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="CounterBtn22"
+            BackgroundColor="Black"
+            Text="Zurück" 
+            SemanticProperties.Hint="Go Back"
+            Clicked="CounterBtn22_Clicked"
+            HorizontalOptions="Center" />
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

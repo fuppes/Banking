@@ -5,17 +5,88 @@
              Title="Transactions">
     <VerticalStackLayout>
 
+        <Image
+            Source="titlelogo.png"
+            HeightRequest="110"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo of the Titlescreen" />
+
+       
+
+        <Label 
+            Text="Transaktionsart filtern:"
+            BackgroundColor="White"
+            TextColor="Black"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Start" 
+            HorizontalOptions="Center" />
+
         <Label 
             Text="Platzhalter"
             TextColor="White"
             Style="{StaticResource SubHeadline}"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
+ 
+
+
+        <Button
+            x:Name="CounterBtn8"
+            BackgroundColor="DarkBlue"
+            Text="Alle Transaktionen" 
+            SemanticProperties.Hint="show transactions1"
+            Clicked="CounterBtn8_Clicked"
+            HorizontalOptions="Center" />
 
         <Label 
-            Text="LETZE TRANSAKTIONEN:"
+            Text="i"
+            TextColor="White"
             Style="{StaticResource SubHeadline}"
             VerticalOptions="Start" 
-            HorizontalOptions="Start" />
+            HorizontalOptions="StartAndExpand" />
+ 
+        <Button
+            x:Name="CounterBtn9"
+            BackgroundColor="DarkBlue"
+            Text="Ausgaben" 
+            SemanticProperties.Hint="show transactions1"
+            Clicked="CounterBtn9_Clicked"
+            HorizontalOptions="Center" />
+
+
+        <Label 
+            Text="i"
+            TextColor="White"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Start" 
+            HorizontalOptions="StartAndExpand" />
+
+        <Button
+            x:Name="CounterBtn10"
+            BackgroundColor="DarkBlue"
+            Text="Einnahmen" 
+            SemanticProperties.Hint="show transactions1"
+            Clicked="CounterBtn10_Clicked"
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="i"
+            TextColor="White"
+            Style="{StaticResource SubHeadline}"
+            VerticalOptions="Start" 
+            HorizontalOptions="StartAndExpand" />
+
+        <Button
+            x:Name="CounterBtn11"
+            BackgroundColor="Black"
+            Text="Zurück zur Startseite" 
+            SemanticProperties.Hint="go to Dashboard-page"
+            Clicked="CounterBtn11_Clicked"
+            HorizontalOptions="Center" />
+
+
+
+
+
     </VerticalStackLayout>
 </ContentPage>

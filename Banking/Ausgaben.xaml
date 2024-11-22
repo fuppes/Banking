@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Ausgaben"
+             Title="Ausgaben">
+    <VerticalStackLayout>
+
+        <Image
+            Source="titlelogo.png"
+            HeightRequest="95"
+            VerticalOptions="Start"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo of the Titlescreen" />
+        
+        <Label 
+            Text="Ausgaben Übersicht"
+            Style="{StaticResource Headline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label 
+            Text="- 20.11.2024 AN: Amazon.com  Betrag: -234,99€  Produkt: B0CFY4496N  Status: Erfolgreich"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label 
+            Text="- 27.09.2024 AN: Apple.com  Betrag: -1.989,90€  Produkt: Iphone 16 Pro Max  Status: Erfolgreich"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label 
+            Text="- 27.09.2024 AN: Zalando.de  Betrag: -145,95€  Produkt: OP7846HGD45M   Status: Erfolgreich"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        
+        <Button
+            x:Name="CounterBtn19"
+            BackgroundColor="Black"
+            Text="Zurück zu Transaktionen" 
+            SemanticProperties.Hint="go to transaction-page"
+            Clicked="CounterBtn19_Clicked"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

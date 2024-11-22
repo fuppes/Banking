@@ -2,9 +2,20 @@
 
 namespace Banking
 {
+    [QueryProperty("username", "username")]
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        private string _username;
+        public string Username { 
+            get => _username;
+            set
+            {
+                _username = value;
+                OnPropertyChanged();
+            }
+        
+        }
 
         public MainPage()
         {
@@ -23,20 +34,23 @@ namespace Banking
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
 
+
         private async void CounterBtn_Clicked(object sender, EventArgs e)
         {
-            User user= new User();
-            user.Username=UsernameEntry.Text;
+            User.Username = UsernameEntry.Text;
 
-            user.Password=PasswordEntry.Text;
+            User.Password = PasswordEntry.Text;
 
             Random random = new Random();
             var tempvalue = random.Next(0, 5000000);
-            user.Accountbalance =tempvalue+ random.NextDouble();
+            User.Accountbalance = tempvalue + random.NextDouble();
 
-            user.IBAN = "DE75512108001245126199";
-            await Shell.Current.GoToAsync(nameof(Dashboard),true);
+            User.IBAN = "DE75512108001245126199";
+
+            string baseUri = Shell.Current.CurrentState.Location.ToString();
+            baseUri = baseUri.TrimEnd('/');
+            await Shell.Current.GoToAsync($"//Dashboard?username={User.Username}", true);
         }
     }
-
+    
 }

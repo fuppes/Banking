@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Einnahmen"
+             Title="Einnahmen">
+    <VerticalStackLayout>
+
+        <Image
+            Source="titlelogo.png"
+            HeightRequest="95"
+            VerticalOptions="Start"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo of the Titlescreen" />
+
+        <Label 
+            Text="Einnahmen Übersicht:"
+            Style="{StaticResource Headline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label 
+            Text="- 20.11.2024 AN: Paypal.de  Betrag: +234,99€  Produkt: /  Status: Erfolgreich Empfangen"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        
+        <Label 
+            Text="- 15.09.2024 AN: Apple.com  Betrag: +499,90€  Produkt: Apple Watch 10/Umtausch  Status: Erfolgreich"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label 
+            Text="- 20.11.2024 AN: Paypal.de  Betrag: +82,50€  Produkt: /  Status: Erfolgreich Empfangen"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label 
+            Text="- 20.11.2024 AN: Paypal.de  Betrag: +12€  Produkt: /  Status: Erfolgreich Empfangen"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Button
+            x:Name="CounterBtn18"
+            BackgroundColor="Black"
+            Text="Zurück zu Transaktionen" 
+            SemanticProperties.Hint="go to transaction-page"
+            Clicked="CounterBtn18_Clicked"
+            HorizontalOptions="Center" />
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

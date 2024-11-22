@@ -4,9 +4,55 @@
              x:Class="Banking.Kontoauszüge"
              Title="Kontoauszüge">
     <VerticalStackLayout>
+
+        <Image
+            Source="titlelogo.png"
+            HeightRequest="110"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Logo of the Titlescreen"  />
+
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Kontonummer:"
+            Style="{StaticResource Headline}"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+            x:Name="KontonummerEntry" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Button
+            x:Name="CounterBtn13"
+            BackgroundColor="DarkBlue"
+            Text="Kontoauszug drucken" 
+            SemanticProperties.Hint="go to next page"
+            Clicked="CounterBtn13_Clicked"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="       uhuhuhhuhhuh  "
+            TextColor="white"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="CounterBtn12"
+            BackgroundColor="Black"
+            Text="Zurück zur Startseite" 
+            SemanticProperties.Hint="go to Dashboard-page"
+            Clicked="CounterBtn12_Clicked"
+            HorizontalOptions="Center" />
+
     </VerticalStackLayout>
 </ContentPage>

@@ -4,6 +4,16 @@
              x:Class="Banking.Überweisungen"
              Title="Überweisungen">
     <VerticalStackLayout>
+
+        <Image
+           Source="titlelogo.png"
+           HeightRequest="110"
+           Aspect="AspectFit"
+           SemanticProperties.Description="Logo of the Titlescreen"  />
+
+
+
+
         <Label 
             Text="Was möchtest du tun?"
             Style="{StaticResource SubHeadline}"
@@ -19,6 +29,7 @@
 
         <Button
          x:Name="CounterBtn5"
+            BackgroundColor="DarkBlue"
          Text="Letzte Überweisung zeigen" 
          SemanticProperties.Hint="go to Überweisung ansehen-page"
          Clicked="CounterBtn5_Clicked"
@@ -33,10 +44,28 @@
 
         <Button
           x:Name="CounterBtn6"
-          Text="Überweisung tätigen" 
+            BackgroundColor="DarkBlue"
+          Text="Überweisung tätigen    " 
           SemanticProperties.Hint="go to Überweisung tätigen-page"
           Clicked="CounterBtn6_Clicked"
           HorizontalOptions="Center" />
+
+
+        <Label
+         Text="       uhuhuhhuhhuh  "
+         TextColor="white"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" />
+
+ 
+
+        <Button
+         x:Name="CounterBtn7"
+            BackgroundColor="Black"
+         Text="Zurück zu Startseite " 
+         SemanticProperties.Hint="go to Dashboard-page"
+         Clicked="CounterBtn7_Clicked"
+         HorizontalOptions="Center" />
 
     </VerticalStackLayout>
 </ContentPage>

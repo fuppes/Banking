@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Banking.Models
 {
-   public class User
+   public static class User
     {
-        public string Username {  get; set; } 
-        public string Password { get; set; }
-        public string IBAN { get; set; }
-        public double Accountbalance { get; set; }
-
+        public static string Username {  get; set; } 
+        public static string Password { get; set; }
+        public static string IBAN { get; set; }
+        public static double Accountbalance { get; set; }
 
     }
 }

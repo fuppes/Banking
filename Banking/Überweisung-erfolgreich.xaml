@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Banking.Überweisung_erfolgreich"
+             Title="Überweisung_erfolgreich">
+    <VerticalStackLayout>
+
+        <Image
+            Source="korrekt.png"
+            HeightRequest="100"
+            VerticalOptions="Start"
+            Aspect="AspectFit"
+            SemanticProperties.Description="Show Überweisung completed" />
+        
+        <Label 
+            Text="Überweisung erfolgreich"
+            Style="{StaticResource Headline}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+           Text="       uhuhuhhuhhuh  "
+           Style="{StaticResource SubHeadline}"
+           TextColor="white"
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Button
+            x:Name="CounterBtn17"
+            BackgroundColor="Black"
+            Text="Zurück zu Startseite " 
+            SemanticProperties.Hint="go to Dashboard-page"
+            Clicked="CounterBtn17_Clicked"
+            HorizontalOptions="Center" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

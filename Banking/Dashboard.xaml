@@ -7,7 +7,7 @@
 
          <Image
             Source="titlelogo.png"
-            HeightRequest="95"
+            HeightRequest="85"
             VerticalOptions="Start"
             Aspect="AspectFit"
             SemanticProperties.Description="Logo of the Titlescreen" />
@@ -22,14 +22,15 @@
 
 
         <Label
-            Text="User:[Username]"
+            Text="User: [Platzhalter]"
             Style="{StaticResource SubHeadline}"
             TextColor="Black"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            />
 
         <Label
-           Text="Kontostand:[Konto]"
+           Text="Kontostand:12.578,98€"
            Style="{StaticResource SubHeadline}"
            TextColor="Black"
            VerticalOptions="Center" 
@@ -38,11 +39,23 @@
             />
 
         <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
            Text="Mögliche Aktionen:"
            Style="{StaticResource SubHeadline}"
            TextColor="Black"
-           VerticalOptions="StartAndExpand" 
-           HorizontalOptions="StartAndExpand" />
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
 
         <Label
            Text="       uhuhuhhuhhuh  "
@@ -54,10 +67,11 @@
 
         <Button
           x:Name="CounterBtn2"
+            BackgroundColor="DarkBlue"
           Text="Überweisung  " 
           SemanticProperties.Hint="go to Überweisung-page"
           Clicked="CounterBtn2_Clicked"
-          HorizontalOptions="Start" />
+          HorizontalOptions="Center" />
 
         <Label
           Text="       uhuhuhhuhhuh  "
@@ -68,9 +82,10 @@
         <Button
          x:Name="CounterBtn3"
          Text="Transaktionen" 
+            BackgroundColor="DarkBlue"
          SemanticProperties.Hint="go to transaction-page"
          Clicked="CounterBtn3_Clicked"
-         HorizontalOptions="Start" />
+         HorizontalOptions="Center" />
 
         <Label
           Text="       uhuhuhhuhhuh  "
@@ -80,10 +95,60 @@
 
         <Button
           x:Name="CounterBtn4"
+            BackgroundColor="DarkBlue"
           Text="Kontoauszüge" 
           SemanticProperties.Hint="go to Kontoauszug-page"
           Clicked="CounterBtn4_Clicked"
-          HorizontalOptions="Start" />
+          HorizontalOptions="Center"/>
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        <Label
+          Text="       uhuhuhhuhhuh  "
+          TextColor="white"
+          VerticalOptions="Center" 
+          HorizontalOptions="Center" />
+
+        
+        
+
+        <Button
+          x:Name="CounterBtn21"
+          BackgroundColor="Black"
+          Text="Ausloggen" 
+          SemanticProperties.Hint="go to Main-page"
+          Clicked="CounterBtn21_Clicked"
+          HorizontalOptions="End"/>
+
 
     </VerticalStackLayout>
-</ContentPage>
+</ContentPage> 
+    
