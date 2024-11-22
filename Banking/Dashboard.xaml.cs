@@ -4,48 +4,55 @@ using Banking.Models;
 
 namespace Banking;
 
+[QueryProperty(nameof(Username), "username")]
+[QueryProperty(nameof(AccountBalance), "accountbalance")]
 public partial class Dashboard : ContentPage, INotifyPropertyChanged
 {
+    private string _username;
+    private string _accountBalance;
 
-    public string _username;
-
-
-    
-    public string username { get => _username; set { _username = value;
-            OnPropertyChanged();
-            LoadItem(value);
-
-           
-        } }
-
-    public Dashboard()
-	{
-		InitializeComponent();
-        
-
-		
-        
-	}
-
-    protected override void OnNavigatedTo(NavigatedToEventArgs args)
+    public string Username
     {
-        base.OnNavigatedTo(args);
-
-        //var test = Shell.Current.CurrentState.Location.AbsoluteUri;
-        // Navigationspfad abrufen
-        var query = Shell.Current.CurrentState.Location.Query;
-        
-        // Query-Parameter parsen
-        if (!string.IsNullOrEmpty(query))
+        get => _username;
+        set
         {
-            var parameters = System.Web.HttpUtility.ParseQueryString(query);
-            _username = parameters["username"];
-            Console.WriteLine($"Empfangener Parameter: {username}");
+            if (_username != value)
+            {
+                _username = value;
+                OnPropertyChanged();
+                LoadName(value); // Lade Daten nur, wenn der Wert sich ändert
+            }
         }
     }
 
-    
+    public string AccountBalance
+    {
+        get => _accountBalance;
+        set
+        {
+            if (_accountBalance != value)
+            {
+                _accountBalance = value;
+                OnPropertyChanged();
+                LoadBalance(value); // Lade Daten nur, wenn der Wert sich ändert
+            }
+        }
+    }
 
+    public Dashboard()
+    {
+        InitializeComponent();
+    }
+
+    private void LoadName(string username)
+    {
+        lblUser.Text += username;
+    }
+
+    private void LoadBalance(string balance)
+    {
+        lblBalance.Text += balance + " €";
+    }
 
     private async void CounterBtn2_Clicked(object sender, EventArgs e)
     {
@@ -65,12 +72,6 @@ public partial class Dashboard : ContentPage, INotifyPropertyChanged
     private async void CounterBtn21_Clicked(object sender, EventArgs e)
     {
         await Shell.Current.Navigation.PopToRootAsync();
-
-    }
-    private void LoadItem(string id)
-    {
-        // Lade Logik, z. B. Daten aus einer Datenbank abrufen
-        Console.WriteLine($"Lade Item mit der ID: {id}");
     }
 
     // Für die UI-Updates

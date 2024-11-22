@@ -22,7 +22,8 @@
 
 
         <Label
-            Text="User: [Platzhalter]"
+            x:Name="lblUser"
+            Text="User: "
             Style="{StaticResource SubHeadline}"
             TextColor="Black"
             VerticalOptions="Center" 
@@ -30,7 +31,8 @@
             />
 
         <Label
-           Text="Kontostand:12.578,98€"
+            x:Name="lblBalance"
+           Text="Kontostand: "
            Style="{StaticResource SubHeadline}"
            TextColor="Black"
            VerticalOptions="Center" 

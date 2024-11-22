@@ -7,14 +7,15 @@ namespace Banking
     {
         int count = 0;
         private string _username;
-        public string Username { 
+        public string Username
+        {
             get => _username;
             set
             {
                 _username = value;
                 OnPropertyChanged();
             }
-        
+
         }
 
         public MainPage()
@@ -38,19 +39,21 @@ namespace Banking
         private async void CounterBtn_Clicked(object sender, EventArgs e)
         {
             User.Username = UsernameEntry.Text;
-
             User.Password = PasswordEntry.Text;
 
             Random random = new Random();
-            var tempvalue = random.Next(0, 5000000);
-            User.Accountbalance = tempvalue + random.NextDouble();
-
+            User.Accountbalance = random.Next(0, 5000000) + random.NextDouble();
             User.IBAN = "DE75512108001245126199";
-
-            string baseUri = Shell.Current.CurrentState.Location.ToString();
-            baseUri = baseUri.TrimEnd('/');
-            await Shell.Current.GoToAsync($"//Dashboard?username={User.Username}", true);
+            var uriBuilder = new UriBuilder
+            {
+                Path = "//Dashboard",
+                Query = $"?username={Uri.EscapeDataString(User.Username)}&accountbalance={Uri.EscapeDataString(User.Accountbalance.ToString())}"
+            };
+            string uri = uriBuilder.Uri.ToString();
+            
+            // Navigation zur Dashboard-Seite mit Query-Parameter
+            await Shell.Current.GoToAsync(uri, true);
         }
     }
-    
+
 }
